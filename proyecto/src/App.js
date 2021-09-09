@@ -1,8 +1,11 @@
 import React from 'react';
+import Card from './components/Card/Card'
 
 function App() {
   return (
-   <p>React</p>
+    <div className="App">
+      <Card/>
+    </div>
   );
 }
 export default App;
