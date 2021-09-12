@@ -28,6 +28,7 @@ componentDidMount() {
 
 render () {
     console.log('Renderizandoooooo')
+    console.log(this.state.contenido);
     return (
         <div> 
           { this.state.contenido.map( (popular,index) => {
