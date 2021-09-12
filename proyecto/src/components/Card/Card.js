@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Content from '../Content/Content';
-
-
-
+import cargando from '../Loader/cargando.gif';
 
 
 export default class Card extends Component {
@@ -31,7 +29,11 @@ render () {
     console.log(this.state.contenido);
     return (
         <div> 
-          { this.state.contenido.map( (popular,index) => {
+            {this.state.contenido === []  ?
+            
+            <img src={cargando} alt=''/> :
+
+            this.state.contenido.map( (popular,index) => {
               return <Content key = {index} title = {popular.title} ></Content>
            
           } 
