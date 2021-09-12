@@ -11,7 +11,6 @@ class Header extends Component {
         return(
 
             <div>
-                <img src="../images/logo-spotify.png" alt="logo"></img>
                 <ul>
                     <li>Home</li>
                     <li>Estrenos</li>
