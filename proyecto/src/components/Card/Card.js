@@ -9,30 +9,32 @@ export default class Card extends Component {
     constructor(props) {
             super(props);
             this.state = {
-                pelisPopulares:  []
+                contenido:  []
             }
     }
 
 componentDidMount() {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=d72b8119ca0d802447ebd91bded10750&language=en-US&page=1')
     .then(response => response.json())
-    .then(data => 
+    .then(data => { 
         
         this.setState({
-            pelisPopulares: data.results
+            contenido: data.results
         })
-        )
-        .catch( error => console.log(error));
+   })
+   .catch ( error => console.log(error));
+
 }
 
-
 render () {
+    console.log('Renderizandoooooo')
     return (
         <div> 
-          { this.state.pelisPopulares.map( content => {
-              return 
+          { this.state.contenido.map( (popular,index) => {
+              return <Content key = {index} title = {popular.title} ></Content>
            
-          } ) }  
+          } 
+          ) }  
         </div>
     )
 }
