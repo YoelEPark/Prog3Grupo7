@@ -5,7 +5,7 @@ import "./Header.css"
 function Header(props) {
     return (
         <header>
-        <h1>Título/ Nombre de la app</h1>
+        <h1>Movie Programming</h1>
         <section>
             <p>Ordenar ASC/ DESC</p>
             <i className="fas fa-th"onClick={()=>props.cuadriculado()}></i>
