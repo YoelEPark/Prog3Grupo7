@@ -35,7 +35,7 @@ render () {
 
             this.state.contenido.map( (popular,index) => {
               return <Content key = {index} title = {popular.title} ></Content>
-           
+                // hola probando git 
           } 
           ) }  
         </div>
