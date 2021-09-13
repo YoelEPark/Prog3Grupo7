@@ -27,7 +27,7 @@ export default class Content extends Component {
     render(){
       
         return (
-            <div className='padre'>
+
             <div className="tarjeta2">
             
              
@@ -37,7 +37,7 @@ export default class Content extends Component {
                 <button onClick={()=> this.props.removerPelicula(this.props.id)}> Eliminar Pelicula </button>
               
             </div>
-            </div>
+            
         )
     }
     

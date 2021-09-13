@@ -11,9 +11,9 @@ class Footer extends Component {
         return(
 
             <div>
-                <img src="" alt=""></img>
-                <p>Hecho por Yoel Park y Matias Gallardo.</p>
+                <p>Hecho por Yoel Park y Matias Gallardo. <img src= "TMDB.png" alt="The Movie Data Base" /></p>
             </div>
+            
 
         )
     }
