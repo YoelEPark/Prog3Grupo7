@@ -35,6 +35,9 @@ export default class Content extends Component {
                 <button onClick={()=> this.props.removerPelicula(this.props.id)}> Eliminar Pelicula </button>
                 <button className="infor" onClick= {() => this.verMas()}>Ver más</button>
                 <p className= {this.state.clase}> Fecha de salida: {this.props.salida} </p>
+                <p className= {this.state.clase}> Calificación media de la audiencia: {this.props.vote} </p>
+                <p className= {this.state.clase}> Idioma original: {this.props.idioma} </p>
+               
               </div>
        
             

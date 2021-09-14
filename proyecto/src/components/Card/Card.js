@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import cargando from '../Loader/cargando.gif';
 import Content from '../Content/Content';
+import "./Card.css"
 
 export default class Card extends Component {
     constructor(props) {
@@ -59,7 +60,7 @@ render () {
     console.log('Renderizandoooooo')
     console.log(this.state.peliculas);
     return (
-        <div style={{ display:'flex', flexWrap: "wrap"  }}> 
+        <div className="flex"   style={{ display:'flex', flexWrap: "wrap", justifyContent: "center"  }}> 
             {this.state.peliculas.length === 0  ?
             
             <img src={cargando} alt=''/> :
@@ -71,7 +72,10 @@ render () {
                  poster = {`https://image.tmdb.org/t/p/w342/${popular.poster_path}`}
                  overview  = {popular.overview} 
                  salida = {popular.release_date}
+                 idioma = {popular.original_language}
+                 vote = {popular.vote_average}
                  removerPelicula = {(id)=>this.removerPelicula(id)}
+             
                  
                  
                  />
