@@ -70,6 +70,7 @@ render () {
                  title = {popular.title}
                  poster = {`https://image.tmdb.org/t/p/w342/${popular.poster_path}`}
                  overview  = {popular.overview} 
+                 salida = {popular.release_date}
                  removerPelicula = {(id)=>this.removerPelicula(id)}
                  
                  
