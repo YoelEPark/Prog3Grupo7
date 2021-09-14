@@ -1,0 +1,12 @@
+.tmdb{
+    width: 10%;
+}
+
+.padre{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.texto{
+    width: 50%;
+}

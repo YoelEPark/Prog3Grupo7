@@ -28,15 +28,14 @@ export default class Content extends Component {
       
         return (
 
-            <div className="tarjeta2">
-            
+            <div className="hijo">
              
                 <img src={this.props.poster} alt={''} />
                 <h1>{this.props.title} </h1>
                 <p> {this.props.overview} </p>
                 <button onClick={()=> this.props.removerPelicula(this.props.id)}> Eliminar Pelicula </button>
-              
-            </div>
+              </div>
+       
             
         )
     }

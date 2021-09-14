@@ -1,13 +1,16 @@
-.tarjeta2{
-   
-    width: 50%;
-    display: flex;
-    flex-wrap:wrap ;
-    gap: 20px;
-    margin: auto;
-    align-items: flex-start;
-   
+ 
+.hijo{
+    width: 25%;
 }
+
+.hijo p{
+    text-align: center;
+}
+
+.hijo h1{
+    text-align: center;
+}
+
 
 
 

@@ -52,11 +52,14 @@ componentDidMount() {
 //     .catch( error => console.log(error));
 //    }
 
+
+ 
+
 render () {
     console.log('Renderizandoooooo')
     console.log(this.state.peliculas);
     return (
-        <div> 
+        <div style={{ display:'flex', flexWrap: "wrap"  }}> 
             {this.state.peliculas.length === 0  ?
             
             <img src={cargando} alt=''/> :
