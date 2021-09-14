@@ -32,7 +32,8 @@ export default class Content extends Component {
                 <img src={this.props.poster} alt={''} />
                 <h1>{this.props.title} </h1>
                 <p> {this.props.overview} </p>
-                <button onClick={()=> this.props.removerPelicula(this.props.id)}> Eliminar Pelicula </button>
+                <button className="elim" onClick={()=> this.props.removerPelicula(this.props.id)}> Eliminar Pelicula </button>
+                <p> </p>
                 <button className="infor" onClick= {() => this.verMas()}>Ver más</button>
                 <p className= {this.state.clase}> Fecha de salida: {this.props.salida} </p>
                 <p className= {this.state.clase}> Calificación media de la audiencia: {this.props.vote} </p>
