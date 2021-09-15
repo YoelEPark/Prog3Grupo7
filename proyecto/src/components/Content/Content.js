@@ -6,6 +6,7 @@ export default class Content extends Component {
          super(props)
           this.state={
               clase: "hide",
+              cambio: "Ver más"
               
       }
    }
@@ -13,12 +14,13 @@ export default class Content extends Component {
  verMas(){
          if(this.state.clase === "hide"){
              this.setState({
-                 clase: "show"
+                 clase: "show",
+                 cambio: "Ver menos"
              })
          } else {
              this.setState({
                  clase: "hide",
-                
+                cambio: "Ver más"
              })            
          }
      }
@@ -34,7 +36,7 @@ export default class Content extends Component {
                 <p> {this.props.overview} </p>
                 <button className="elim" onClick={()=> this.props.removerPelicula(this.props.id)}> Eliminar Pelicula </button>
                 <p> </p>
-                <button className="infor" onClick= {() => this.verMas()}>Ver más</button>
+                <button className="infor" onClick= {() => this.verMas()}> {this.state.cambio} </button>
                 <p className= {this.state.clase}> Fecha de salida: {this.props.salida} </p>
                 <p className= {this.state.clase}> Calificación media de la audiencia: {this.props.vote} </p>
                 <p className= {this.state.clase}> Idioma original: {this.props.idioma} </p>

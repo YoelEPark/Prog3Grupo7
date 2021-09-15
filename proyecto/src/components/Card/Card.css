@@ -1,4 +1,5 @@
 .flex{
   background-image: url("../Fondo/elfondo.png");
   background-size: cover;
+  align-items: flex-start;
  }
