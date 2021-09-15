@@ -1,5 +1,5 @@
 import React  from "react"
-
+import "./Header.css";
 
 
 function Header(props) {
@@ -7,7 +7,7 @@ function Header(props) {
         <header>
         <h1>Movie Programming</h1>
         <section>
-            <p>Ordenar ASC/ DESC</p>
+            
             <i className="fas fa-th"onClick={()=>props.cuadriculado()}></i>
             <br></br>
             <i className="fas fa-align-justify" onClick={()=>props.alineado()}></i>

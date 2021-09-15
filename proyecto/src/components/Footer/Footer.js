@@ -12,10 +12,10 @@ class Footer extends Component {
     render(){
         return(
 
-            <div className="padre">
-                <p className="texto">Hecho por Yoel Park y Matias Gallardo.    </p>
+            <footer className="padre">
+                <p className="texto">Hecho por Matias Gallardo y Yoel Park.    </p>
                 <img className="tmdb" src={logo} alt=''/>
-            </div>
+            </footer>
             
 
         )
