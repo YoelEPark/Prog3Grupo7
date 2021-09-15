@@ -3,3 +3,36 @@
   background-size: cover;
   align-items: flex-start;
  }
+
+ .mastarjetas{
+  
+     
+    background-color: #bf00ff ;  
+border: none;
+color: white;
+padding: 16px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+transition-duration: 0.4s;
+cursor: pointer;
+   
+}
+ 
+
+.mastarjetas {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+     background-color: white; 
+    color: black; 
+    border: 2px solid #bf00ff  ;
+}
+ 
+  .mastarjetas:hover {
+    background-color: #bf00ff;
+    color: white;
+  }
+ 

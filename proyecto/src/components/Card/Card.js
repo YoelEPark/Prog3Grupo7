@@ -17,7 +17,7 @@ export default class Card extends Component {
     }
 
 componentDidMount() {
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d72b8119ca0d802447ebd91bded10750&language=en-US&page=${this.state.pagina}`)
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d72b8119ca0d802447ebd91bded10750&language=en-US`)
     .then(response => response.json())
     .then(data => { 
         
@@ -41,17 +41,17 @@ componentDidMount() {
  }
 
 
-// verMas(){
-//     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d72b8119ca0d802447ebd91bded10750&language=en-US&page=${this.state.pagina}`)
-//     .then( response => response.json())
-//     .then( data  => {
-//         this.setState({
-//         cargando: true,
-//         peliculas: this.state.peliculas.concat(data.results),
-//         pagina: this.state.pagina + 1
-//     })})
-//     .catch( error => console.log(error));
-//    }
+    addTarjetas(){
+     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d72b8119ca0d802447ebd91bded10750&language=en-US&page=${this.state.pagina}`)
+     .then( response => response.json())
+     .then( data  => {
+         this.setState({
+         cargando: true,
+         peliculas: this.state.peliculas.concat(data.results),
+         pagina: this.state.pagina + 1 
+     })})
+     .catch( error => console.log(error));
+    }
 
 
  
@@ -61,6 +61,8 @@ render () {
     console.log(this.state.peliculas);
     return (
         <div className="flex"   style={{ display:'flex', flexWrap: "wrap", justifyContent: "center"  }}> 
+
+             <button className="mastarjetas" onClick={()=>this.addTarjetas()}> Agregar más peliculas </button>
             {this.state.peliculas.length === 0  ?
             
             <img src={cargando} alt=''/> :
