@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import cargando from '../Loader/cargando.gif';
 import Content from '../Content/Content';
 import "./Card.css"
-
+import FiltroDePeliculas from '../FiltroDePeliculas/FiltroDePeliculas';
 export default class Card extends Component {
     constructor(props) {
             super(props);
@@ -53,7 +53,26 @@ componentDidMount() {
      .catch( error => console.log(error));
     }
 
-
+ filtrarPorTitulo(tituloAFiltrar){
+        console.log(tituloAFiltrar);
+        const arrayFiltrado = this.state.peliculasOriginales.filter( elemento => {
+                  return  elemento.title.toLowerCase().includes(tituloAFiltrar.toLowerCase())
+        })
+            if (tituloAFiltrar === ""){
+                this.setState({
+                    peliculas: this.state.peliculasOriginales 
+                 })
+            } else {
+                this.setState({
+                    peliculas: arrayFiltrado 
+                 })
+            }
+  
+      
+            
+            
+   
+ }
  
 
 render () {
@@ -61,7 +80,7 @@ render () {
     console.log(this.state.peliculas);
     return (
         <div className="flex"   style={{ display:'flex', flexWrap: "wrap", justifyContent: "center"  }}> 
-
+                <FiltroDePeliculas filtroPorTitulo={(titulo)=> this.filtrarPorTitulo(titulo)} />
              <button className="mastarjetas" onClick={()=>this.addTarjetas()}> Agregar más peliculas </button>
             {this.state.peliculas.length === 0  ?
             
