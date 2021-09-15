@@ -1,5 +1,4 @@
-/* .flex{
- display:'flex';
-  flex-wrap: "wrap";
-   justify-content: "center" ;
- } */
+.flex{
+  background-image: url("../Fondo/elfondo.png");
+  background-size: cover;
+ }
