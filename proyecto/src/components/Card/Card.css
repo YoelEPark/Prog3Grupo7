@@ -48,3 +48,15 @@ cursor: pointer;
     color: white;
   }
  
+  .noExiste{
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 900px;
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  .loading{
+    margin-bottom: 900px;
+    margin-left: 100px;
+    margin-top: 100px;
+  }

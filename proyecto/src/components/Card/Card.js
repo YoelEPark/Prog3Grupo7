@@ -97,9 +97,12 @@ render () {
              <button className="botones" onClick={()=>this.addTarjetas()}> Agregar más peliculas </button>
              <button className="botones" onClick={()=>this.cambiarOrientacion()}> Cambiar orientación </button>
              </div>
-            {this.state.peliculas.length === 0  ?
+            {this.state.peliculasOriginales.length === 0  ?
             
-            <img src={cargando} alt=''/> :
+            <img className="loading"src={cargando} alt=''/> : 
+            
+             this.state.peliculas.length === 0 ?
+                <h1 className="noExiste">No hay datos que coincidan con su búsqueda</h1> : 
 
              this.state.peliculas.map( (popular,index) => {
                 return <Content key = {index}
@@ -117,8 +120,11 @@ render () {
                  
                  />
                  
-          } 
-          ) }  
+          }
+           
+          ) 
+        }
+          
         </div>
     )
 }
