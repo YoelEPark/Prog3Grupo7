@@ -29,7 +29,7 @@ export default class Content extends Component {
       
         return (
 
-            <div className="hijo">
+            <div className={`hijo-${this.props.orientacion}`}>
              
                 <img src={this.props.poster} alt={''} />
                 <h1>{this.props.title} </h1>

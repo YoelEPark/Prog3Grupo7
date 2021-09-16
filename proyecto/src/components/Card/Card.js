@@ -12,7 +12,8 @@ export default class Card extends Component {
                 peliculasOriginales: [],
                 peliculasBorradas:[],
                 cargando: false,
-                display: props.display
+                display: props.display,
+                orientacion: "row"
             }
     }
 
@@ -67,21 +68,35 @@ componentDidMount() {
                     peliculas: arrayFiltrado 
                  })
             }
-  
-      
-            
-            
-   
+     
  }
+      
+            cambiarOrientacion(){
+                if (this.state.orientacion === "row"){
+                    this.setState({
+                        orientacion: "column" })
+                } else {
+                    this.setState({
+                        orientacion: "row"
+                    })
+                }
+               
+               
+            }
+            
+
  
 
 render () {
     console.log('Renderizandoooooo')
     console.log(this.state.peliculas);
     return (
-        <div className="flex"   style={{ display:'flex', flexWrap: "wrap", justifyContent: "center"  }}> 
+        <div className={`flex-${this.state.orientacion}`}  > 
+        <div>
                 <FiltroDePeliculas filtroPorTitulo={(titulo)=> this.filtrarPorTitulo(titulo)} />
-             <button className="mastarjetas" onClick={()=>this.addTarjetas()}> Agregar más peliculas </button>
+             <button className="botones" onClick={()=>this.addTarjetas()}> Agregar más peliculas </button>
+             <button className="botones" onClick={()=>this.cambiarOrientacion()}> Cambiar orientación </button>
+             </div>
             {this.state.peliculas.length === 0  ?
             
             <img src={cargando} alt=''/> :
@@ -95,6 +110,7 @@ render () {
                  salida = {popular.release_date}
                  idioma = {popular.original_language}
                  vote = {popular.vote_average}
+                 orientacion={this.state.orientacion}
                  removerPelicula = {(id)=>this.removerPelicula(id)}
              
                  

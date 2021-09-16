@@ -1,4 +1,5 @@
 import React, {Component}  from "react"
+import "./FiltroDePeliculas.css"
 
 export default class FiltroDePeliculas extends Component {
     constructor(){
@@ -25,7 +26,7 @@ export default class FiltroDePeliculas extends Component {
   render() {
      return(
             <form onSubmit={(evento) =>  this.prevenirRefresh(evento)}>
-                <label>  Search:       </label>
+                <label> Buscar Película: </label>
                 <input onChange={(evento)=>{this.capturaInput(evento)}}  type="text" />    
 
             </form>

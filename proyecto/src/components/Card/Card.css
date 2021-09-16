@@ -1,10 +1,22 @@
-.flex{
+.flex-row{
   background-image: url("../Fondo/elfondo.png");
   background-size: cover;
   align-items: flex-start;
+   display:flex;
+   flex-wrap: wrap;
+    justify-content: center;
+ }
+ .flex-column{
+  background-image: url("../Fondo/elfondo.png");
+  background-size: cover;
+  align-items: flex-start;
+   display:flex;
+   flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
  }
 
- .mastarjetas{
+ .botones{
   
      
     background-color: #bf00ff ;  
@@ -22,7 +34,7 @@ cursor: pointer;
 }
  
 
-.mastarjetas {
+.botones {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -31,7 +43,7 @@ cursor: pointer;
     border: 2px solid #bf00ff  ;
 }
  
-  .mastarjetas:hover {
+  .botones:hover {
     background-color: #bf00ff;
     color: white;
   }
