@@ -10,11 +10,7 @@ export default class FiltroDePeliculas extends Component {
      }
   }
 
-  prevenirRefresh(evento){
-      console.log("Refresh evitado con exito")
-      evento.prevenirDefault();
-  }
-
+ 
   capturaInput(evento){
             this.setState({
                 valorInput:  evento.target.value
@@ -25,10 +21,10 @@ export default class FiltroDePeliculas extends Component {
 
   render() {
      return(
-            <form onSubmit={(evento) =>  this.prevenirRefresh(evento)}>
+            <form  >
                 <label> Buscar Película: </label>
                 <input onChange={(evento)=>{this.capturaInput(evento)}}  type="text" />    
-
+ 
             </form>
 
      )
