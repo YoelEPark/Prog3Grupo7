@@ -9,9 +9,7 @@ export default class Card extends Component {
             this.state = {
                 peliculas: [],
                 pagina: 1,
-                peliculasOriginales: [],
-                peliculasBorradas:[],
-                cargando: false,
+                peliculasOriginales: [], 
                 display: props.display,
                 orientacion: "row"
             }
@@ -23,8 +21,7 @@ componentDidMount() {
     .then(data => { 
         
         this.setState({
-            peliculas: data.results,
-            cargando: true,
+            peliculas: data.results, 
             peliculasOriginales: data.results,
             pagina: this.state.pagina + 1
         })
@@ -36,8 +33,7 @@ componentDidMount() {
  removerPelicula(id){
      let buenas = this.state.peliculas.filter(pelicula => pelicula.id !==id)
      this.setState({
-         peliculas: buenas,
-         peliculasBorradas: this.state.peliculasBorradas.concat(id)
+         peliculas: buenas, 
      })
  }
 
@@ -47,7 +43,6 @@ componentDidMount() {
      .then( response => response.json())
      .then( data  => {
          this.setState({
-         cargando: true,
          peliculas: this.state.peliculas.concat(data.results),
          pagina: this.state.pagina + 1 
      })})
