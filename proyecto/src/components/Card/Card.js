@@ -54,15 +54,11 @@ componentDidMount() {
         const arrayFiltrado = this.state.peliculasOriginales.filter( elemento => {
                   return  elemento.title.toLowerCase().includes(tituloAFiltrar.toLowerCase())
         })
-            if (tituloAFiltrar === ""){
-                this.setState({
-                    peliculas: this.state.peliculasOriginales 
-                 })
-            } else {
+           
                 this.setState({
                     peliculas: arrayFiltrado 
                  })
-            }
+          
      
  }
       
