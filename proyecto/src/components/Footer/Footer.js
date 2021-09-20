@@ -14,7 +14,7 @@ class Footer extends Component {
 
             <footer className="padre">
                 <p className="texto">Hecho por Matias Gallardo y Yoel Park.    </p>
-                <img className="tmdb" src={logo} alt=''/>
+                <img className="tmdb" src={logo} alt='The Movie Data Base'/>
             </footer>
             
 
