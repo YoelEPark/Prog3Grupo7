@@ -3,7 +3,7 @@ import cargando from '../Loader/cargando.gif';
 import Content from '../Content/Content';
 import "./Card.css"
 import FiltroDePeliculas from '../FiltroDePeliculas/FiltroDePeliculas';
-export default class Card extends Component {
+class Card extends Component {
     constructor(props) {
             super(props);
             this.state = {
@@ -15,7 +15,7 @@ export default class Card extends Component {
             }
     }
 
-componentDidMount() {
+componentDidMount() { 
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d72b8119ca0d802447ebd91bded10750&language=en-US`)
     .then(response => response.json())
     .then(data => { 
@@ -34,6 +34,7 @@ componentDidMount() {
      let buenas = this.state.peliculas.filter(pelicula => pelicula.id !==id)
      this.setState({
          peliculas: buenas, 
+         peliculasOriginales: buenas,
      })
  }
 
@@ -120,3 +121,5 @@ render () {
     )
 }
 }
+
+export default Card;
